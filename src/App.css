@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: #141414; */
+  background-color: rgb(15, 8, 31);
+
+
+
+}
+
+.drawer {
+
+  max-width: 97%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+/* Sidebar styling */
+.sidebar {
+  max-height: 300px;
+  width: 3%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  margin: 8px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu li .icon {
+  font-size: 18px;
+  margin-top: 16px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+
+
+.icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  left: 100%;
+  /* Position tooltip on the right side of the icon */
+  background-color: white;
+  color: #000;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(20px);
+  /* Start the tooltip from the right */
+  white-space: nowrap;
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+}
+
+.menu-item:hover .tooltip {
+  opacity: 1;
+  transform: translateY(-22px);
+
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .main {
+    height: 100vh;
+  }
+
+  .drawer {
+    min-height: 100%;
+  }
+
+  /* Sidebar styling */
+  .sidebar {
+    max-height: 270px;
+    padding: 15px;
+    margin: 10px;
+    z-index: 100;
+  }
+
+
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li .icon {
+    font-size: 14px;
+    margin-top: 15px;
+
+  }
+
+  .tooltip {
+    color: black;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: none;
+
+  }
+
+  .menu-item:hover .tooltip {
+
+    transform: translateY(-16px);
+  }
+
+
+}
+@media (min-width: 500px) and (max-width: 1024px){
+
+  .main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: #141414; */
+    background-color: rgb(15, 8, 31);
+  
+}
+  
+  .drawer {
+  
+   width: 97%;
+  height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  /* Sidebar styling */
+  .sidebar {
+    padding: 25px;
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .tooltip {
+font-weight: 400;
+  }
+}
+
+/* Mobile responsive styles - move sidebar to the bottom */
+@media (max-width: 500px) {
+  .main {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    background: hsla(0, 0%, 98%, .1);
+    display: flex;
+    /* justify-content: space-around;  */
+    align-items: center;
+    z-index: 10;
+  }
+
+  .drawer {
+    width: 100%;
+    height: 100%;
+  
+
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .menu li {
+    margin: 22px;
+  }
+
+  .icon {
+    font-size: 15px;
+    margin-top: 0;
+    padding: 0;
+  }
+}
