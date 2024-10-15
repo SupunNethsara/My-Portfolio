@@ -39,6 +39,7 @@
   align-items: center;
   padding: 17px;
   margin: 8px;
+  z-index: 100;
 }
 
 .menu {

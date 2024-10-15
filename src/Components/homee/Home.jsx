@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faWhatsapp, faInstagram, faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 import { Typewriter } from 'react-simple-typewriter';
 // import softwareitem1 from '/assets/pngwing1.png';
 import softwareitem1 from '/pngwing1.png';
@@ -16,12 +16,64 @@ import softwareitem9 from '/pngwing9.png';
 import softwareitem10 from '/pngwing10.png';
 import softwareitem11 from '/pngwing11.png';
 import softwareitem12 from '/pngwing12.png';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ScrollReveal from 'scrollreveal';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 import './Home.css';
 
 export const Home = () => {
+
+  //Cv Download
+  const [isDownloded, setIsDownloaded] = useState(false);
+  const handleDownload = () => {
+    setIsDownloaded(true);
+    const link = document.createElement('a');
+    link.href = '/path/to/your/CV.pdf'; // Update with your actual CV file path
+    link.download = 'Supun_Nethsara_CV.pdf'; // The downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+  }
+  // Handle closing the backdrop
+  const handleClose = () => {
+    setOpen(false);
+  };
+  //Naviagte more button
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    setOpen(true); // Open the backdrop
+    setTimeout(() => {
+      setOpen(false); // Close the backdrop
+      navigate('/about'); // Navigate to the /about page
+    }, 2000); // Delay for 2 seconds (you can adjust this)
+  };
+
+  //animation
+
+  useEffect(() => {
+    ScrollReveal().reveal('.text-section', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+    ScrollReveal().reveal('.img-box', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+  }, []);
   return (
     <>
+    
+      <Backdrop sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}open={open}onClick={handleClose}><CircularProgress color="inherit" /></Backdrop>
+
+
       <div className="social-media">
         <ul className='list'>
           <li><FontAwesomeIcon icon={faFacebook} /></li>
@@ -30,7 +82,7 @@ export const Home = () => {
           <li><FontAwesomeIcon icon={faInstagram} /></li>
         </ul>
       </div>
-    
+
       <div className="main-sec" >
         <div className="text">
           <div className="text-section">
@@ -46,10 +98,10 @@ export const Home = () => {
               />
             </span>
             <div className='pera'>
-            <p>With over 2+ Years of experience as a freelance video editor, I bring stories to life through compelling visuals and seamless storytelling. My passion for filmmaking and content creation drives me to craft engaging videos that captivate audiences. Whether it’s editing dynamic vlogs, promotional content, or cinematic short films, wedding films, I thrive on collaborating with clients to transform their visions into reality. Let’s create something amazing together!</p>
+              <p>With over 4 years of experience as a freelance web developer, I specialize in creating dynamic and user-friendly websites that bring ideas to life. Currently pursuing a Bachelor of Information Technology (BIT) degree at the University of Colombo, I have a strong passion for front-end development, especially with frameworks like React and Angular. My expertise spans full-stack development, and I thrive on transforming concepts into functional, visually appealing web applications. Let’s collaborate to build exceptional digital experiences together!</p>
 
             </div>
-           
+
             <div className="software">
               <div className="software_item">
                 <img src={softwareitem1} alt="" />
@@ -93,22 +145,11 @@ export const Home = () => {
 
             </div>
             <div className='cv' style={{ display: 'flex' }}>
-              <button>CV Downlod</button>
-              <button>More</button>
+              <button onClick={handleDownload}> {isDownloded ? 'CV Downloaded' : 'Download CV'}</button>
+              <button onClick={handleNavigate}>More</button>
+
             </div>
-            <div className="circle-text mx-auto xl:mx-0 my-6">
-              <Link href={'#'} className="relative w-[165px] h-[165px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group">
-                <img
-                  src="/rounded-text.png"
-                  width={121}
-                  height={128}
-                  alt="Spinning Image"
-                  className="animate-spin-slow w-full max-w-[121px] max-h-[128px]"
-                />
-                {/* Centered arrow inside the image */}
-                <ArrowRightAltIcon className="absolute text-4xl group-hover:translate-x-2 transition-ll duration-300" />
-              </Link>
-            </div>
+          
           </div>
         </div>
         <div className="image-container">
@@ -121,13 +162,13 @@ export const Home = () => {
           <div className="explosion-background">
             <img src="/bg-explosion.png" alt="" />
           </div>
-     
+
         </div>
         <div className='top-right-image absolute right-0 bottom-0 z-10 w-[200px] xl:w-[400px] mix-blend-color-dodge '>
-            <img src="/top-right-image.png" alt="" />
-          </div>
+          <img src="/top-right-image.png" alt="" />
+        </div>
       </div>
-     
+
     </>
   )
 }

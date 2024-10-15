@@ -1,0 +1,83 @@
+.skills-bar .bar {
+
+   
+}
+
+.skills-bar .bar{
+ 
+    margin: 42px 10px 10px 0px;
+}
+.skills-bar .bar .title {
+    color: #ffffff;
+    text-align: center;
+
+
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+.skills-bar .candidatos {
+    position: relative;
+    margin-bottom: 15px;
+
+
+}
+
+.skills-bar .candidatos .parcial {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+}
+
+.skills-bar .candidatos .parcial .info {
+    position: relative;
+}
+
+.skills-bar .candidatos .parcial .info .nome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.9;
+    color: rgb(180, 175, 175);
+}
+
+.skills-bar .candidatos .parcial .info .percentag-num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: rgb(180, 175, 175);
+}
+
+.skills-bar .candidatos .parcial .presentagebar {
+    position: relative;
+    width: 100%;
+    height: 7px;
+    margin: 30px 0 2px;
+    border-radius: 10px;
+    background: rgba(68, 67, 67, 0.5);
+}
+
+.skills-bar .candidatos .parcial .presentagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background:  rgb(224, 40, 40);
+    transition: 3s all;
+    animation: animationProgress 3s ease-in-out forwards;
+}
+
+@keyframes animationProgress {
+    0% {
+        width: 0%;
+    }
+
+}

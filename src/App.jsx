@@ -8,6 +8,10 @@ import { About } from './Components/About/About';
 import { Services } from './Components/Servicess/Services';
 import { Portfolio } from './Components/Portfolio/Portfolio';
 import { Contact } from './Components/Contact/Contact';
+import { Skills } from './Components/About/Datatabs/Skills/Skills';
+import { Eduacion } from './Components/About/Datatabs/Education/Eduacion';
+import { Experience } from './Components/About/Datatabs/Experience/Experience';
+import { Technology } from './Components/About/Datatabs/technologies/Technology';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -24,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="main">
-      <div className='top-left-image absolute left-0 top-0 mix-blend-color-dodge z-10 w-[400px] xl:w-[400px]'>
+      <div className='top-left-image absolute left-0 top-0 mix-blend-color-dodge z-10 w-[400px] xl:w-[400px] '>
         <img src="/top-left-img.png" alt="" />
       </div>
         <div className={`sidebar ${open ? "open" : ""}`}>
@@ -58,7 +62,12 @@ function App() {
         
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About />} >
+            <Route index element={<Skills/>} />
+              <Route path="education" element={<Eduacion/>} />
+              <Route path="experience" element={<Experience />} />
+              <Route path="technology" element={<Technology />} />
+             </Route>
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
