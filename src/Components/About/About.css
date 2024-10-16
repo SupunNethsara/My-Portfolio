@@ -1,14 +1,10 @@
-.about-conatiner {
-    width: 100%;
-    height: 100%;
-
-}
-
 .about-container {
-    display: flex;
     width: 100%;
     height: 100%;
+   display: flex;
 }
+
+
 
 .profile-details {
     width: 50%;
@@ -16,22 +12,6 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-
-}
-
-.profile-details .content {
-    margin-top: 25%;
-    margin-left: 10%;
-}
-
-.edu-content {
-    margin-top: 25%;
-    margin-left: 18%;
-}
-.about-drawer{
-    width: 100%;
-   
-    height: auto;
 }
 .about-edu-exp {
     width: 50%;
@@ -39,6 +19,24 @@
     justify-content: center;
     align-items: center;
     text-align: left;
+}
+
+
+.profile-details .content {
+    width: 100%;
+    height: auto;
+    margin-top: 25%;
+    margin-left: 10%;
+}
+
+.edu-content {
+    margin-top: 25%;
+    margin-left: 14%;
+}
+.about-drawer{
+    width: 100%;
+   
+    height: auto;
 }
 
 .profile-details h1 {
@@ -61,7 +59,7 @@
 
 .profile-details p {
     text-align: left;
-    color: #ffffff;
+    color: #d1caca;
     margin-top: 15px;
 
 }
@@ -92,3 +90,137 @@
     font-size: 13px;
     text-align: center;
 }
+.top-right-image{
+    position:fixed;
+    right:-100px;
+    bottom:-20px;
+    width: 350px;
+    height: auto;
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+    display: block;
+}
+  
+@media (max-width: 576px) {
+    .about-container {
+        width: auto;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    
+    
+    .profile-details {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .about-edu-exp {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    
+    
+    .profile-details .content {
+        width: 100%;
+        height: auto;
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+
+    .profile-details h1 {
+       font-size: 15px;
+    }
+    
+    .profile-details h2 {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 700;
+        display: grid;
+        text-transform: uppercase;
+    }
+    
+    .profile-details p {
+        text-align: center;
+        color: #d1caca;
+        margin-top: 15px;
+        font-size: 15px;    
+    }
+    
+    .achievements-sec {
+        display: flex;
+        width: 100%;
+        height: auto;
+    justify-content: center;
+        align-items: center;
+    }
+    
+    .achievement {
+        margin: 30px 10px 5px 10px;
+   
+    }
+    
+    .achievement h3 {
+        color: rgba(255, 0, 0, 1);
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 0;
+    }
+    
+    .achievement p {
+        color: #dad4d4;
+        font-size: 12px;
+        text-align: center;
+    }
+    .circle-text{
+  width: 50%;
+     justify-content: center;
+     align-items: center;
+     margin-left:0;
+     margin-right: 0;
+     
+    }
+    .edu-content {
+        margin:0;
+    }
+    .about-nav {
+        width: 100%;
+        margin: 3px 10px 3px 10px; /* Ensure full width of nav */
+      }
+    
+    
+    
+      .MuiTabs-root {
+        width: 100%; /* Tabs take full width */
+      }
+      .about-drawer{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-right-image{
+        position:fixed;
+        right:-100px;
+        bottom:-20px;
+        width: 200px;
+        height: auto;
+        background-size: cover;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        mix-blend-mode: color-dodge;
+        z-index: 0;
+        display: block;
+    }
+  
+}
+
+    
+

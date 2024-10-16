@@ -62,18 +62,18 @@ export const Home = () => {
     });
     ScrollReveal().reveal('.img-box', {
       origin: 'bottom',
-      distance: '40px',
-      duration: 1000,
+      distance: '80px',
+      duration: 2000,
       reset: true,
       easing: 'ease-in-out'
     });
   }, []);
   return (
     <>
-    
-      <Backdrop sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}open={open}onClick={handleClose}><CircularProgress color="inherit" /></Backdrop>
-
-
+      <div className='top-left-image'>
+        <img src="/top-left-img.png" alt="" />
+      </div>
+      <Backdrop sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })} open={open} onClick={handleClose}><CircularProgress color="inherit" /></Backdrop>
       <div className="social-media">
         <ul className='list'>
           <li><FontAwesomeIcon icon={faFacebook} /></li>
@@ -84,6 +84,7 @@ export const Home = () => {
       </div>
 
       <div className="main-sec" >
+
         <div className="text">
           <div className="text-section">
             <h6>Hello I'm a</h6>
@@ -144,12 +145,12 @@ export const Home = () => {
               </div>
 
             </div>
-            <div className='cv' style={{ display: 'flex' }}>
+            <div className='cv' >
               <button onClick={handleDownload}> {isDownloded ? 'CV Downloaded' : 'Download CV'}</button>
               <button onClick={handleNavigate}>More</button>
 
             </div>
-          
+
           </div>
         </div>
         <div className="image-container">
@@ -162,11 +163,11 @@ export const Home = () => {
           <div className="explosion-background">
             <img src="/bg-explosion.png" alt="" />
           </div>
+          <div className='top-right-image absolute  right-0 bottom-0  z-10 w-[400px] xl:w-[400px] hidden sm:block mix-blend-color-dodge '>
+            <img src="/top-right-image.png" alt="" />
+          </div>
+        </div>
 
-        </div>
-        <div className='top-right-image absolute right-0 bottom-0 z-10 w-[200px] xl:w-[400px] mix-blend-color-dodge '>
-          <img src="/top-right-image.png" alt="" />
-        </div>
       </div>
 
     </>

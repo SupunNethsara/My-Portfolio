@@ -12,9 +12,6 @@
   align-items: center;
   /* background-color: #141414; */
   background-color: rgb(15, 8, 31);
-
-
-
 }
 
 .drawer {
@@ -98,132 +95,61 @@
   display: none;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .main {
-    height: 100vh;
-  }
-
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 576px) {
   .drawer {
-    min-height: 100%;
-  }
-
-  /* Sidebar styling */
-  .sidebar {
-    max-height: 270px;
-    padding: 15px;
-    margin: 10px;
-    z-index: 100;
-  }
-
-
-
-  .menu li {
-    margin: 10px 0;
-  }
-
-  .menu li .icon {
-    font-size: 14px;
-    margin-top: 15px;
-
-  }
-
-  .tooltip {
-    color: black;
-    padding: 2px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: none;
-
-  }
-
-  .menu-item:hover .tooltip {
-
-    transform: translateY(-16px);
-  }
-
-
+width: 100%;
 }
-@media (min-width: 500px) and (max-width: 1024px){
-
-  .main {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: center;
-    /* background-color: #141414; */
-    background-color: rgb(15, 8, 31);
-  
-}
-  
-  .drawer {
-  
-   width: 97%;
-  height: 100%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  
-  }
-  /* Sidebar styling */
-  .sidebar {
-    padding: 25px;
-    margin: 10px;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .tooltip {
-font-weight: 400;
-  }
-}
-
-/* Mobile responsive styles - move sidebar to the bottom */
-@media (max-width: 500px) {
-  .main {
-    display: block;
-    height: 100%;
-    width: 100%;
-
-  }
-
   .sidebar {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    min-width: 100%;
     height: auto;
     border-radius: 0;
     margin: 0;
     padding: 0;
-    background: hsla(0, 0%, 98%, .1);
+    background: hsla(0, 0%, 98%, 0.1);
     display: flex;
-    /* justify-content: space-around;  */
+    justify-content: space-around; /* Ensures spacing is even */
     align-items: center;
     z-index: 10;
   }
-
-  .drawer {
-    width: 100%;
-    height: 100%;
-  
-
-  }
-
   .menu {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .menu li {
-    margin: 22px;
-  }
-
-  .icon {
-    font-size: 15px;
-    margin-top: 0;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
   }
+  
+  .menu li {
+    margin: 17px;
+  }
+  
+  .menu li .icon {
+    font-size: 17px;
+    margin: 0;
+    
+  }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+ 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+ 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }

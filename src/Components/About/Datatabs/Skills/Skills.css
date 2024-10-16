@@ -1,12 +1,9 @@
+
 .skills-bar .bar {
 
-   
-}
-
-.skills-bar .bar{
- 
     margin: 42px 10px 10px 0px;
 }
+
 .skills-bar .bar .title {
     color: #ffffff;
     text-align: center;
@@ -70,7 +67,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background:  rgb(224, 40, 40);
+    background: rgb(224, 40, 40);
     transition: 3s all;
     animation: animationProgress 3s ease-in-out forwards;
 }
@@ -80,4 +77,15 @@
         width: 0%;
     }
 
+}
+
+@media (max-width:576px) {
+    .skills-bar .candidatos .parcial {
+ width: 100%;
+    }
+    .skills-bar .bar {
+
+        margin: 35px 18px 65px 18px;
+    }
+    
 }

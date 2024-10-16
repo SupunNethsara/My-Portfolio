@@ -3,7 +3,8 @@ import './About.css';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { NavLink, Outlet ,Link } from 'react-router-dom';
+import ScrollReveal from 'scrollreveal';
+import { NavLink, Outlet, Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 export const About = () => {
   const [clients, setClients] = useState(0);
@@ -12,6 +13,22 @@ export const About = () => {
   const [experience, setExperience] = useState(0);
 
   useEffect(() => {
+
+    ScrollReveal().reveal('.content', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+    ScrollReveal().reveal('.edu-content', {
+      origin: 'bottom',
+      distance: '70px',
+      duration: 2000,
+      reset: true,
+      easing: 'ease-in-out'
+    });
+
     const experienceInterval = setInterval(() => {
       setExperience((prev) => {
         if (prev < 4) return prev + 1;
@@ -62,6 +79,9 @@ export const About = () => {
   return (
     <>
       <div className='about-container'>
+         <div className='top-left-image'>
+        <img src="/top-left-img.png" alt="" />
+      </div>
         <div className="profile-details">
           <div className="content">
             <h1>Supun Nethsara</h1>
@@ -91,14 +111,14 @@ export const About = () => {
             <div className="circle-text mx-auto xl:mx-0 my-6">
               <Link href={'#'} className="relative w-[165px] h-[165px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group">
                 <img
-                  src="./rounded-text.png"
+                  src="/rounded-text.png"
                   width={121}
                   height={128}
                   alt="Spinning Image"
                   className="animate-spin-slow w-full max-w-[121px] max-h-[128px]"
                 />
                 {/* Centered arrow inside the image */}
-                <ArrowRightAltIcon sx={{color:'#ffffff'}} className="absolute text-4xl group-hover:translate-x-2 transition-ll duration-300" />
+                <ArrowRightAltIcon sx={{ color: '#ffffff' }} className="absolute text-4xl group-hover:translate-x-2 transition-ll duration-300" />
               </Link>
             </div>
           </div>
@@ -114,39 +134,58 @@ export const About = () => {
                   indicatorColor="primary"
                   aria-label="custom tabs example"
                   sx={{
-                    '.MuiTabs-indicator': { backgroundColor: '#ffffff' },
-                    '.MuiTab-root': { color: '#ffffff' },
+                    '.MuiTabs-indicator': { backgroundColor: '#ffffff'},
+                    '.MuiTab-root': {
+                      color: '#ffffff',
+                      padding: '12px',
+                      fontSize: '12px', // Default font size
+                    },
                     '.Mui-selected': { color: '#ff0000', fontWeight: 'bold' },
                     '.MuiTab-root:hover': { color: '#928e9c' },
+                    width: '100%', // Ensure full width of tabs
+                    '@media (max-width: 768px)': {
+                      '.MuiTab-root': {
+                        fontSize: '0.9rem',
+                         
+                      },
+                      
+                    },
+                    '@media (max-width: 576px)': {
+                      '.MuiTab-root': {
+                        fontSize: '0.6rem',
+                        padding:'1px',
+                        margin:'0px'
+                      },
+                    },
                   }}
                 >
-                  <Tab 
-                    component={NavLink} 
-                    to="/about" // Adjust this path to your route setup
-                    value="one" 
-                    label="Skills" 
-                    sx={{ textDecoration: 'none' }} // Optional: remove underline on link
+                  <Tab
+                    component={NavLink}
+                    to="/about"
+                    value="one"
+                    label="Skills"
+                    sx={{ textDecoration: 'none' }}
                   />
-                  <Tab 
-                    component={NavLink} 
-                    to="/about/technology" 
-                    value="two" 
-                    label="Technologies" 
-                    sx={{ textDecoration: 'none' }} // Optional: remove underline on link
+                  <Tab
+                    component={NavLink}
+                    to="/about/technology"
+                    value="two"
+                    label="Technologies"
+                    sx={{ textDecoration: 'none' }}
                   />
-                  <Tab 
-                    component={NavLink} 
-                    to="/about/experience" 
-                    value="three" 
-                    label="Experiences" 
-                    sx={{ textDecoration: 'none' }} // Optional: remove underline on link
+                  <Tab
+                    component={NavLink}
+                    to="/about/experience"
+                    value="three"
+                    label="Experiences"
+                    sx={{ textDecoration: 'none' }}
                   />
-                  <Tab 
-                    component={NavLink} 
-                    to="/about/education" 
-                    value="four" 
-                    label="Educations" 
-                    sx={{ textDecoration: 'none' }} // Optional: remove underline on link
+                  <Tab
+                    component={NavLink}
+                    to="/about/education"
+                    value="four"
+                    label="Educations"
+                    sx={{ textDecoration: 'none' }}
                   />
                 </Tabs>
               </Box>
@@ -155,11 +194,13 @@ export const About = () => {
               <Outlet /> {/* Render the nested routes here */}
             </div>
           </div>
+
+
         </div>
       </div>
 
       {/* Decorative Image */}
-      <div className='top-right-image absolute right-0 bottom-0 z-10 w-[200px] xl:w-[400px] mix-blend-color-dodge'>
+      <div className='top-right-image'>
         <img src="/circles.png" alt="Decorative" />
       </div>
     </>
