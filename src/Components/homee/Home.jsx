@@ -163,7 +163,7 @@ export const Home = () => {
           <div className="explosion-background">
             <img src="/bg-explosion.png" alt="" />
           </div>
-          <div className='top-right-image absolute  right-0 bottom-0  z-10 w-[400px] xl:w-[400px] hidden sm:block mix-blend-color-dodge '>
+          <div className='top-right-image absolute  right-0 bottom-0  z-10 w-[400px] xl:w-[400px] hidden sm:block  mix-blend-color-dodge '>
             <img src="/top-right-image.png" alt="" />
           </div>
         </div>

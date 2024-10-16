@@ -85,9 +85,9 @@ export const About = () => {
         <div className="profile-details">
           <div className="content">
             <h1>Supun Nethsara</h1>
-            <h2>Undergraduate Student & <span>Full Stack Developer</span></h2>
+            <h2>Undergraduate Student<span> & Full Stack Developer</span></h2>
             <p>
-              Bringing ideas to life through clean code and intuitive design. <br />
+              Bringing ideas to life through clean code and intuitive design. 
               4 years ago, I began freelancing as a web developer. Since then, I’ve worked with clients on a range of web projects, specializing in front-end technologies like React and Angular. I’m passionate about delivering exceptional user experiences and scalable solutions that help businesses thrive online.
             </p>
             <div className='achievements-sec'>
@@ -108,8 +108,8 @@ export const About = () => {
                 <p>Technology <br />Certifications</p>
               </div>
             </div>
-            <div className="circle-text mx-auto xl:mx-0 my-6">
-              <Link href={'#'} className="relative w-[165px] h-[165px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group">
+            <div className="circle-text mx-auto  my-6">
+              <Link href={'#'} className=" relative w-[165px] h-[165px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group">
                 <img
                   src="/rounded-text.png"
                   width={121}
@@ -148,6 +148,7 @@ export const About = () => {
                         fontSize: '0.9rem',
                          
                       },
+                      '.Mui-selected': { color: '#ff0000', fontWeight: 'bold' },
                       
                     },
                     '@media (max-width: 576px)': {
@@ -156,7 +157,18 @@ export const About = () => {
                         padding:'1px',
                         margin:'0px'
                       },
+                      '.MuiTab-root:hover': { color: '#928e9c' },
+                      '.Mui-selected': { color: '#ff0000', fontWeight: 'bold' },
                     },
+                    '@media (min-width: 993px) and (max-width: 1200px)':{
+                      '.MuiTab-root': {
+                        fontSize: '10px',
+                        padding:'10px',
+                        margin:'0px'
+                      },
+                      '.MuiTab-root:hover': { color: '#928e9c' },
+                      '.Mui-selected': { color: '#ff0000', fontWeight: 'bold' },
+                    }
                   }}
                 >
                   <Tab

@@ -89,3 +89,12 @@
     }
     
 }
+@media (min-width: 993px) and (max-width: 1200px){
+
+}  .skills-bar .candidatos .parcial {
+ width: 100%;
+    }
+    .skills-bar .bar {
+        width: 80%;
+        margin: 25px 30px 50px 10px;
+    }

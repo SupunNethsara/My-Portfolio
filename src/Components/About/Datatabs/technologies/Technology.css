@@ -19,6 +19,7 @@
 @media (max-width: 576px) {
     .tech{
         margin: 10px 10px 100px 0px;
+        justify-content: left;
     }
     .tech .software {
      gap: 20px;
@@ -30,4 +31,30 @@
         width: 28px;
    
     } 
+}
+@media (min-width: 769px) and (max-width: 992px){
+   
+    .tech .software {
+        justify-content: left;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px){
+   
+    .tech .software {
+     gap: 30px;
+       margin: 25px;
+    }
+    
+    .tech .software .software_item {
+        height: 30px;
+        width: 30px;
+   
+    } 
+}
+@media (min-width: 1200px){
+    .tech .software {
+        gap: 30px;
+          margin: 25px;
+       }
 }
