@@ -52,13 +52,7 @@
     font-weight: 700;
     text-align: center;
 }
-.heading-text{
-    color: #fff;
-    text-align: center;
-   justify-content: center;
-   align-items: center;
-  word-wrap: break-word;
-}
+
 .serv-boxes{
     width: 100%;
     height: auto;
@@ -107,4 +101,86 @@
     float: left;
     font-size: 16px;
     color: #fff;
+}
+
+@media (max-width: 576px){
+    .serv-boxes{
+    margin-top: 30px;  
+    margin-bottom: 70px; 
+    }
+ 
+    .heading-title{
+       font-size: 20px;
+     }
+   
+    .cards{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        
+    }
+    .cards .box{
+        flex-basis: 30%;
+     
+        background: rgba(41, 40, 40, 0.3);
+        margin: 15px;
+       width: 100%;
+    }
+
+    .down-right-bulb{
+        position:fixed;
+        right:-40px;
+        bottom:20px;
+        width: 120px;
+      
+    }
+    .left-bottom-down-img{
+        display: none;
+    }
+    .top-right-side-img{
+        position:fixed;
+        top: 0;
+        left: -20px;
+        width: 250px;
+ 
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .cards .box{
+        flex-basis: 40%;
+    }
+    .cards{
+        margin: 1%;
+        margin-top: 30px;
+    }
+    .serv-boxes{
+        margin-top: 30px;  
+     
+        }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .serv-boxes{
+        margin-top: 70px;  
+     }
+     .cards{
+        margin: 1%;
+        margin-top: 70px;
+    }
+    .cards .box{
+        flex-basis: 44%;
+    }
+}
+@media (min-width: 993px) and (max-width: 1200px){
+    .serv-boxes{
+      
+     }
+     .cards{
+        margin: 1%;
+   
+    }
+    .cards .box{
+        flex-basis: 30%;
+    }
 }

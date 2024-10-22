@@ -140,7 +140,12 @@ li {
   .drawer {
     width: 100%;
   }
-
+  .social-media .logo{
+    margin-left:50px ;
+  }
+  .social-media .logo h3{
+   font-size: 12px;
+  }
   .sidebar {
     position: fixed;
     bottom: 0;
@@ -192,20 +197,21 @@ li {
   .sidebar {
     max-height: 350px;
     padding: 25px;
-
+    
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
   .sidebar {
-    max-height: 230px;
-    padding: 20px;
+    max-height: 250px;
+    padding: 10px;
+    margin: 7px;
   }
 
   .menu li .icon {
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 10px;
+    margin: 3px;
     color: white;
     transition: color 0.3s ease;
   }

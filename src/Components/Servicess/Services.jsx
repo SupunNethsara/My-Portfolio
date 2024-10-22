@@ -20,7 +20,7 @@ export const Services = () => {
     <>
       <div className="serv-main">
         <div className='serv-boxes'>
-          <div className="headings"></div>
+        
           <h2 className='heading-title'>My Services</h2>
         
           <div className="cards" >
@@ -73,6 +73,7 @@ export const Services = () => {
           <img src="/circles2.png" alt="Decorative" />
         </div>
       </div>
+    
     </>
   )
 }
