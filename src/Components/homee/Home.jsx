@@ -74,14 +74,17 @@ export const Home = () => {
         <img src="/top-left-img.png" alt="" />
       </div>
       <Backdrop sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })} open={open} onClick={handleClose}><CircularProgress color="inherit" /></Backdrop>
-      <div className="social-media">
+      {/* <div className="social-media">
+        <div className="logo">
+          <h3>Supun<span>Nethsara</span></h3>
+        </div>
         <ul className='list'>
           <li><FontAwesomeIcon icon={faFacebook} /></li>
           <li><FontAwesomeIcon icon={faGithub} /></li>
           <li><FontAwesomeIcon icon={faWhatsapp} /></li>
           <li><FontAwesomeIcon icon={faInstagram} /></li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="main-sec" >
 

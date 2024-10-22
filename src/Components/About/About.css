@@ -3,7 +3,12 @@
     height: 100%;
    display: flex;
 }
-
+.heading-title{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .profile-details {
@@ -25,12 +30,12 @@
 .profile-details .content {
     width: 100%;
     height: auto;
-    margin-top: 25%;
+    margin-top: 23%;
     margin-left: 10%;
 }
 
 .edu-content {
-    margin-top: 25%;
+    margin-top: 22%;
     margin-left: 14%;
 }
 .about-drawer{
@@ -61,6 +66,7 @@
     text-align: left;
     color: #d1caca;
     margin-top: 15px;
+    width: 80%;
 
 }
 
@@ -154,6 +160,7 @@
         margin-top: 15px;
         font-size: 13px; 
         padding: 2px 10px 2px 10px;   
+        width: 100%;
     }
     
     .achievements-sec {

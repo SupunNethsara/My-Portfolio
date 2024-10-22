@@ -23,6 +23,46 @@
 
 
 }
+/*Social-Media*/
+
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+
+ 
+}
+.social-media .logo{
+  margin-left:80px ;
+}
+.social-media .logo h3{
+  font-family: 'Roboto', sans-serif; 
+  color: red;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.social-media .logo h3 span{
+  color:#d1c9c9;
+font-weight: 400;
+  opacity: 0.9;
+}
+
+.list {
+  display: flex;
+  float: right;
+  margin-right: 50px;
+ 
+}
+
+li {
+  color: rgb(180, 174, 174);
+  margin: 10px 10px 10px 25px;
+  font-size: 19px;
+  list-style: none;
+  display: inline-block;
+}
+
 
 /* Sidebar styling */
 .sidebar {
@@ -46,7 +86,7 @@
 }
 
 .menu li {
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .menu li .icon {

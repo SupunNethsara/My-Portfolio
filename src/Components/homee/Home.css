@@ -1,24 +1,3 @@
-/*Social-Media*/
-
-
-.social-media {
-    width: 100%;
-    height: auto;
-    padding: 5px;
-}
-
-.list {
-    display: flex;
-    float: right;
-    margin-right: 50px;
-}
-
-li {
-    color: rgb(180, 174, 174);
-    margin: 10px 10px 10px 25px;
-    font-size: 19px;
-    list-style: none;
-}
 
 
 /*main*/
@@ -75,7 +54,7 @@ li {
 }
 
 .text-section p {
-    max-width: 80%;
+    width: 80%;
     font-size: 15px;
     line-height: 1.6;
     color: #b8b3b3;

@@ -1,0 +1,110 @@
+.down-right-bulb{
+    position:fixed;
+    right:-100px;
+    bottom:-10px;
+    width: 200px;
+    height: auto;
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+    display: block;
+}
+.top-right-side-img{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: auto;
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+    display: block;
+}
+.left-bottom-down-img{
+    position:fixed;
+   bottom: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+    display: block;
+}
+
+.serv-main{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.heading-title{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.heading-text{
+    color: #fff;
+    text-align: center;
+   justify-content: center;
+   align-items: center;
+  word-wrap: break-word;
+}
+.serv-boxes{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.cards{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8%;
+    
+}
+.cards .box{
+    flex-basis: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(59, 59, 59, 0.1);
+    margin: 15px;
+    max-width: 330px;
+    min-width: 280px;
+}
+.cards .box i{
+    color: 
+    #fa3e5e
+    ;
+    margin: 12px;
+    font-size: 20px;
+  
+}
+.cards .box h2{
+    color: #ffffff;
+    padding: 8px;
+}
+.cards .box p{
+    padding: 10px;
+}
+.cards .box .click{
+    float: left;
+    font-size: 16px;
+    color: #fff;
+}

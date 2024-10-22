@@ -78,11 +78,13 @@ export const About = () => {
 
   return (
     <>
+     <h2 className='heading-title'>About me</h2>
       <div className='about-container'>
          <div className='top-left-image'>
         <img src="/top-left-img.png" alt="" />
       </div>
         <div className="profile-details">
+      
           <div className="content">
             <h1>Supun Nethsara</h1>
             <h2>Undergraduate Student<span> & Full Stack Developer</span></h2>
