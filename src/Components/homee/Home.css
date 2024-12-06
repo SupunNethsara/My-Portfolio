@@ -302,8 +302,8 @@
         /* Prevent long words from breaking layout */
     }
 
-    .typewrite {
-        font-size: 1.4rem;
+    .text .typewrite {
+        font-size: 30px;
         min-Height: 20px;
         margin-Top: 3px;
 
@@ -474,7 +474,7 @@
     }
 
 
-    .typewrite {
+    .text .typewrite {
         font-size: 2.2rem;
         min-Height: 20px;
     }
@@ -547,7 +547,7 @@
         margin-left: 9%;
     }
 
-    .typewrite {
+    .text .typewrite {
         font-size: 2.2rem;
     }
 
@@ -630,7 +630,7 @@
 
     }
 
-    .typewrite {
+    .text .typewrite {
         font-size: 2rem;
         display: inline-block;
         min-Height: 40px;
@@ -717,7 +717,7 @@
         text-align: left;
     }
 
-    .typewrite {
+    .text .typewrite {
         font-size: 1.9rem;
         margin-Top: 3px;
     }

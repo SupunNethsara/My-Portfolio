@@ -20,7 +20,7 @@
 
 .all .row .card-all {
     flex: 1 1 30%; 
-    max-width: 370px; 
+    max-width: 300px; 
     height: 200px;
     margin: 10px; 
     background-color: transparent;
@@ -64,16 +64,16 @@
 .all .row .card-all .card-content h3 {
     margin: 0;
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
+  
+ 
     color: #e4dede;
 }
 
 .all .row .card-all .card-content p {
     font-size: 13px;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
+
+ 
     color: #ebe3e3;
 }
 
@@ -153,6 +153,7 @@
         max-width: 100%; /* Set a max width for better control */
         height: 200px;
         margin: 5px;
+        margin:10px 12px 10px 12px;
     
        
     }
@@ -163,6 +164,7 @@
     }
     .all .row {
         margin-top: 15px;
+        margin-bottom: 60px;
     }
     .all .row .card-all .card-content h3 {
         margin: 0;
