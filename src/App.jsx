@@ -15,6 +15,10 @@ import { Technology } from './Components/About/Datatabs/technologies/Technology'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faWhatsapp, faInstagram, faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 import 'remixicon/fonts/remixicon.css';
+import All from './Components/Portfolio/Component-portfolio/All';
+import Webapp from './Components/Portfolio/Component-portfolio/Webapp';
+import Userdesign from './Components/Portfolio/Component-portfolio/Userdesign';
+import Webdesign from './Components/Portfolio/Component-portfolio/Webdesign';
 function App() {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Home");
@@ -70,18 +74,22 @@ function App() {
             </ul>
           </div>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} >
-              <Route index element={<Skills />} />
-              <Route path="education" element={<Eduacion />} />
-              <Route path="experience" element={<Experience />} />
-              <Route path="technology" element={<Technology />} />
-
-            </Route>
-            <Route path="/services" element={<Services/>} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />}>
+    <Route index element={<Skills />} />
+    <Route path="education" element={<Eduacion />} />
+    <Route path="experience" element={<Experience />} />
+    <Route path="technology" element={<Technology />} />
+  </Route>
+  <Route path="/services" element={<Services />} />
+  <Route path="/portfolio" element={<Portfolio />}>
+    <Route index element={<All />} />
+    <Route path="webapp" element={<Webapp />} />
+    <Route path="website" element={<Webdesign />} />
+    <Route path="userdesign" element={<Userdesign />} />
+  </Route>
+  <Route path="/contact" element={<Contact />} />
+</Routes>
 
 
         </div>

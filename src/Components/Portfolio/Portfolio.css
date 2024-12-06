@@ -1,0 +1,27 @@
+.Portfolio {
+    width: 100%;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the items */
+    width: 100%;
+  }
+  
+  .nav li {
+    margin: 0 20px; /* Space between the items */
+    cursor: pointer;
+  }
+  
+  .nav li:hover {
+    color: #ff0000; /* Add hover effect */
+  }
+  

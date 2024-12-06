@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 .main {
@@ -11,12 +12,12 @@
   justify-content: flex-start;
   align-items: center;
   /* background-color: #141414; */
-  background-color: rgb(15, 8, 31);
+  background-color: rgb(13, 1, 24);
 }
 
 .drawer {
 
-  max-width: 97%;
+  width: 100%;
   min-height: 100vh;
   justify-content: center;
   align-items: center;

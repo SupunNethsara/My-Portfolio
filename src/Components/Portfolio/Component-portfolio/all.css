@@ -1,0 +1,171 @@
+.all {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.all .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    align-items: center;
+    gap: 20px; /* Reduce the gap between cards */
+    margin-top: 50px;
+}
+
+.all .row .card-all {
+    flex: 1 1 30%; 
+    max-width: 370px; 
+    height: 200px;
+    margin: 10px; 
+    background-color: transparent;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    justify-content: center;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.all .row .card-all img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+
+}
+
+
+
+
+.all .row .card-all .card-content {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 22%; 
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, .5), #1a1b1b);
+    opacity: 1;
+    transition: height 0.8s ease, opacity 0.8s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.all .row .card-all:hover .card-content {
+    height: 100%; 
+    opacity: 1;
+}
+
+.all .row .card-all .card-content h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: #e4dede;
+}
+
+.all .row .card-all .card-content p {
+    font-size: 13px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: #ebe3e3;
+}
+
+.all .row .card-all .card-content i {
+    padding: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 25px;
+    color: #1E90FF;
+    cursor: pointer;
+    line-height: 3;
+  
+    
+}
+
+
+.all .row .card-all .card-content i:hover {
+    background-color: #1E90FF;
+    color: #ffffff;
+}
+
+@media (min-width: 1200px) and (max-width:1500px){
+
+    .image1{
+     max-width: 430px;
+    }
+
+    .all .row .card-all {
+       
+        max-width: 30%; /* Control the maximum width for better alignment */
+        height: 200px;
+        
+      }
+      
+      .all .row {
+        gap: 20px; /* Reduce gap between cards */
+        margin: 10px;
+        margin-left: 20px;
+      } 
+}
+
+ @media (min-width: 993px) and (max-width: 1200px){
+    .image1{
+        max-width: 300px;
+       }
+       .all .row .card-all {
+       
+        max-width: 30%; /* Control the maximum width for better alignment */
+        height: 180px;
+        
+      }
+      
+      .all .row {
+        gap: 20px; /* Reduce gap between cards */
+        margin: 10px;
+        margin-left: 30px;
+      } 
+   
+}
+@media (min-width: 576px) and (max-width: 768px){
+    .all .row .card-all {
+        flex: 1 1 45%; /* This allows two cards per row */
+        max-width: 45%; /* Control the maximum width for better alignment */
+        height: 200px;
+        margin: 10px; /* Adjust spacing between cards */
+      }
+      
+      .all .row {
+        gap: 20px; /* Reduce gap between cards */
+        margin-top: 30px;
+      } 
+}
+@media  (max-width:576px){
+    
+    .all .row .card-all {
+        flex: 1 1 100%; /* Two cards per row */
+        max-width: 100%; /* Set a max width for better control */
+        height: 200px;
+        margin: 5px;
+    
+       
+    }
+    .all .row .card-all .card-content {
+        
+        height: 25%;
+        cursor: pointer;
+    }
+    .all .row {
+        margin-top: 15px;
+    }
+    .all .row .card-all .card-content h3 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+}
