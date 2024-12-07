@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Import React here
 import './App.css';
-import { FaHome, FaUser, FaProjectDiagram, FaChartBar, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaChartBar,FaComment , FaEnvelope } from 'react-icons/fa';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Home } from './Components/homee/Home';
@@ -19,6 +19,8 @@ import All from './Components/Portfolio/Component-portfolio/All';
 import Webapp from './Components/Portfolio/Component-portfolio/Webapp';
 import Userdesign from './Components/Portfolio/Component-portfolio/Userdesign';
 import Webdesign from './Components/Portfolio/Component-portfolio/Webdesign';
+import { fontSize } from '@mui/system';
+import Feedbacks from './Components/Feedbacks/Feedbacks';
 function App() {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("Home");
@@ -28,6 +30,7 @@ function App() {
     { name: "About", link: "/about", icon: FaUser },
     { name: "Services", link: "/services", icon: FaProjectDiagram },
     { name: "Portfolio", link: "/portfolio", icon: FaChartBar },
+    { name: "Feedbacks", link: "/feedbacks", icon: FaComment },
     { name: "Contact", link: "/contact", icon: FaEnvelope },
   ];
 
@@ -52,7 +55,7 @@ function App() {
                     })}
                   </div>
                   {/* Tooltip */}
-                  <span className={`tooltip ${open ? "hidden" : ""}`}>
+                  <span style={{fontSize:'13px'}} className={`tooltip ${open ? "hidden" : ""}`}>
                     {menu.name}
                   </span>
                 </Link>
@@ -88,6 +91,7 @@ function App() {
     <Route path="website" element={<Webdesign />} />
     <Route path="userdesign" element={<Userdesign />} />
   </Route>
+  <Route path="/feedbacks" element={<Feedbacks />} />
   <Route path="/contact" element={<Contact />} />
 </Routes>
 

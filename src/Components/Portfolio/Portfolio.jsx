@@ -96,6 +96,9 @@ export const Portfolio = () => {
         <div id="default-tab-content">
       
           <Outlet/>
+          <div className='down-right-bulb animate-pulse duration-75 '>
+          <img src="/bulb.png" alt="Decorative" />
+        </div>
         </div>
       </div>
     </div>

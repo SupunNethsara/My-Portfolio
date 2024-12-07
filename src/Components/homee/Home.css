@@ -28,7 +28,7 @@
 .text-section {
     width: 100%;
     height: auto;
-    margin-top: 16%;
+    margin-top: 10%;
     margin-left: 15%;
 }
 
@@ -280,26 +280,26 @@
 
     .pera {
         width: 100%;
-        /* Ensure full width */
+  
         display: flex;
-        /* Use flexbox to center the content */
+  
         justify-content: center;
-        /* Center horizontally */
+
         align-items: center;
-        /* Center vertically */
+
     }
 
     .text-section p {
         line-height: 1.4;
         width: 100%;
-        /* Make sure paragraph takes the full width */
+    
         font-size: 13px;
         text-align: center;
-        /* Center-align the paragraph text */
+   
         padding: 5px;
-        /* Add padding for better readability */
+    
         word-break: break-word;
-        /* Prevent long words from breaking layout */
+    
     }
 
     .text .typewrite {

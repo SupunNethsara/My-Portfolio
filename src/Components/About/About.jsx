@@ -69,7 +69,7 @@ export const About = () => {
     };
   }, []);
 
-  // Tabs movement
+
   const [value, setValue] = useState('one');
 
   const handleChange = (event, newValue) => {
@@ -119,7 +119,7 @@ export const About = () => {
                   alt="Spinning Image"
                   className="animate-spin-slow w-full max-w-[121px] max-h-[128px]"
                 />
-                {/* Centered arrow inside the image */}
+             
                 <ArrowRightAltIcon sx={{ color: '#ffffff' }} className="absolute text-4xl group-hover:translate-x-2 transition-ll duration-300" />
               </Link>
             </div>
@@ -140,11 +140,11 @@ export const About = () => {
                     '.MuiTab-root': {
                       color: '#ffffff',
                       padding: '12px',
-                      fontSize: '12px', // Default font size
+                      fontSize: '12px',
                     },
                     '.Mui-selected': { color: '#ff0000', fontWeight: 'bold' },
                     '.MuiTab-root:hover': { color: '#928e9c' },
-                    width: '100%', // Ensure full width of tabs
+                    width: '100%', 
                     '@media (max-width: 768px)': {
                       '.MuiTab-root': {
                         fontSize: '0.9rem',
@@ -205,7 +205,7 @@ export const About = () => {
               </Box>
             </div>
             <div className="about-drawer">
-              <Outlet /> {/* Render the nested routes here */}
+              <Outlet /> 
             </div>
           </div>
 
@@ -213,7 +213,7 @@ export const About = () => {
         </div>
       </div>
 
-      {/* Decorative Image */}
+    
       <div className='top-right-image'>
         <img src="/circles.png" alt="Decorative" />
       </div>

@@ -66,8 +66,8 @@ li {
 
 
 /* Sidebar styling */
-.sidebar {
-  max-height: 300px;
+.main .sidebar {
+  max-height: 400px;
   width: 3%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
@@ -76,7 +76,7 @@ li {
   justify-content: center;
   align-items: center;
   padding: 17px;
-  margin: 8px;
+  margin: 4px;
   z-index: 100;
 }
 
@@ -106,21 +106,20 @@ li {
   justify-content: center;
 }
 
-.tooltip {
+.menu  .tooltip {
   position: absolute;
   left: 100%;
-  /* Position tooltip on the right side of the icon */
-  background-color: white;
+ background-color: white;
   color: #000;
   padding: 3px;
   border-radius: 5px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s, transform 0.3s;
-  transform: translateX(20px);
+  transform: translateX(50px);
   /* Start the tooltip from the right */
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 18px;
 
   text-transform: uppercase;
 
@@ -147,7 +146,7 @@ li {
   .social-media .logo h3{
    font-size: 12px;
   }
-  .sidebar {
+  .main .sidebar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -185,7 +184,7 @@ li {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) {
-  .sidebar {
+ .main .sidebar {
     width: 3%;
     padding: 25px;
     margin: 10px;
@@ -195,19 +194,21 @@ li {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) {
-  .sidebar {
+ .main .sidebar {
     max-height: 350px;
     padding: 25px;
+    margin: 10px;
     
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
-  .sidebar {
-    max-height: 250px;
-    padding: 10px;
+  .main .sidebar {
+  
+    padding: 13px;
     margin: 7px;
+    
   }
 
   .menu li .icon {
@@ -229,8 +230,8 @@ li {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .sidebar {
-    max-height: 270px;
+  .main .sidebar {
+  
     padding: 20px;
   }
 

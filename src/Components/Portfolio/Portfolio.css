@@ -24,4 +24,16 @@
   .nav li:hover {
     color: #ff0000; /* Add hover effect */
   }
-  
+ .down-right-bulb{
+    position:fixed;
+    right:-100px;
+    bottom:-10px;
+    width: 200px;
+    height: auto;
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+    display: block;
+  }

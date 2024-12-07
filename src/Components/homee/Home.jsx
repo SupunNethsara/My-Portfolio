@@ -161,7 +161,7 @@ export const Home = () => {
           <div className="img-box">
             <div className="img-item">
               <img src="/bg-remover.png" alt="" srcset="" />
-            </div>
+          </div>
           </div>
           <div className="explosion-background">
             <img src="/bg-explosion.png" alt="" />
