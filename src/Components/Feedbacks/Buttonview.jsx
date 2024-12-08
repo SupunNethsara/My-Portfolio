@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { db } from "./FirebaseConfig";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 
 function ModalExample() {
@@ -9,7 +10,15 @@ function ModalExample() {
   const [comment, setComment] = useState("");
   const [profilePic, setProfilePic] = useState(null);
  
-
+  const handleProfilePicChange = (e) => {
+    // const file = e.target.files[0];
+    // if (file) {
+    //   setProfilePic(file);
+    if(e.target.files[0]){
+      setProfilePic(e.target.files[0]);
+    }
+    // }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -28,19 +37,14 @@ function ModalExample() {
       setComment("");
       setProfilePic(null);
       setIsOpen(false);
-      setShowToast(true);
+   
    
     } catch (error) {
       console.error("Error adding feedback:", error);
     }
   };
 
-  const handleProfilePicChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setProfilePic(file);
-    }
-  };
+
 
   return (
     <>
@@ -112,6 +116,7 @@ function ModalExample() {
                   >
                     Close
                   </button>
+                
               
                 </div>
               </form>

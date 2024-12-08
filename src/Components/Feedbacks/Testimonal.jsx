@@ -33,13 +33,13 @@ function Testimonal() {
     <div className="swiper-container">
       <Swiper
         cssMode={true}
-        navigation={true} 
+        navigation={true}
         pagination={{ clickable: true }}
         mousewheel={true}
         keyboard={true}
         autoplay={{
-          delay: 3000, 
-          disableOnInteraction: false, 
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         spaceBetween={20}
         slidesPerView={1}
@@ -50,7 +50,7 @@ function Testimonal() {
           <SwiperSlide key={testimonial.id}>
             <div className="card">
               {testimonial.profilePic && (
-                <img src='bg-remover.png' alt="User" className="rounded mt-2" />
+                <img src='profile.jpg' alt="User" className="rounded mt-2" />
               )}
               <div className="card__content">
                 <span><i className="ri-double-quotes-l"></i></span>
@@ -63,16 +63,16 @@ function Testimonal() {
           </SwiperSlide>
         ))}
       </Swiper>
-      
+
       <div className='down-right-bulb animate-pulse duration-75 '>
-          <img src="/bulb.png" alt="Decorative" />
-        </div>
-        <div className='top-right-side-img animate-pulse '>
-          <img src="/top-left-img.png" alt="Decorative" />
-        </div>
-        <div className='left-bottom-down-img animate-pulse duration-75'>
-          <img src="/circles2.png" alt="Decorative" />
-        </div>
+        <img src="/bulb.png" alt="Decorative" />
+      </div>
+      <div className='top-right-side-img animate-pulse '>
+        <img src="/top-left-img.png" alt="Decorative" />
+      </div>
+      <div className='left-bottom-down-img animate-pulse duration-75'>
+        <img src="/circles2.png" alt="Decorative" />
+      </div>
     </div>
   );
 }
