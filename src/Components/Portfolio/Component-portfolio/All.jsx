@@ -22,7 +22,7 @@ function All() {
             <div className="card-content">
               <h3>Student Management (LMS)</h3>
               <p>React and laravel Project.using React in the laravel project.Incremental Devloment.not finish .</p>
-              <a href='#'><i class=" ri-external-link-fill"></i></a>
+              <a href='https://github.com/SupunNethsara/LMS-Student-leraning-and-managment-'><i class=" ri-external-link-fill"></i></a>
             </div>
           </div>
           <div className='card-all'>
@@ -30,7 +30,7 @@ function All() {
             <div className="card-content">
               <h3>Photographer Porfolio</h3>
               <p>Using React and Firebase for this project.This was made at the request of a person.</p>
-              <a href='#'> <i class="ri-external-link-fill"></i></a>
+              <a href='https://shashimal-liyanage.netlify.app/'> <i class="ri-external-link-fill"></i></a>
             </div>
           </div>
           <div className='card-all'>
@@ -38,7 +38,7 @@ function All() {
             <div className="card-content">
               <h3>B&w Theme Portfolio</h3>
               <p>Using React  for this project.This was made at the request of a person.have responsive layout.</p>
-              <a href='#'><i class="ri-external-link-fill"></i></a>
+              <a href='https://github.com/SupunNethsara/Portfolio-Black-White-Theme'><i class="ri-external-link-fill"></i></a>
             </div>
           </div>
           <div className='card-all'>
@@ -46,7 +46,7 @@ function All() {
             <div className="card-content">
               <h3>E-commerce Front-end</h3>
               <p>This project is an E-commerce front-end website developed using AngularJS and TypeScript. It features a dynamic design with modern UI components, product catalogs, and responsive layouts, providing an interactive user experience.</p>
-              <a href='#'><i class="ri-external-link-fill"></i></a>
+              <a href='https://github.com/SupunNethsara/Online-Shoping-Center'><i class="ri-external-link-fill"></i></a>
             </div>
           </div>
           <div className='card-all'>
@@ -54,7 +54,7 @@ function All() {
             <div className="card-content">
               <h3>E-learning Front-end</h3>
               <p>This project is an E-commerce front-end website built using HTML, CSS, and JavaScript. It features a modern design and includes essential components for an online learning, such as corces displays, navigation, and responsive layouts.</p>
-              <a href='#'><i class="ri-external-link-fill"></i></a>
+              <a href='https://github.com/SupunNethsara/E-learning-Platform-Front-end-'><i class="ri-external-link-fill"></i></a>
             </div>
           </div>
           <div className='card-all'>
@@ -62,7 +62,7 @@ function All() {
             <div className="card-content">
               <h3>Hosting Service Front-end</h3>
               <p>This project is a Hosting Service front-end website designed using Bootstrap. It includes a responsive layout, modern UI components, and features such as service plans, pricing tables, and contact forms to enhance user engagement.</p>
-              <a href='#'><i class="ri-external-link-fill"></i></a>
+              <a href='https://github.com/SupunNethsara/Hosting-Service-Bootstrap-Front-end-'><i class="ri-external-link-fill"></i></a>
             </div>
           </div>
         </div>

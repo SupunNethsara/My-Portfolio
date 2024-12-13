@@ -19,7 +19,7 @@ function Webdesign() {
           <div className="card-content">
             <h3>Traveling Guide</h3>
             <p>Would you like to know more About this ? .You Can get more information about this by clicking here .Get in touch</p>
-            <a href='#'><i class=" ri-external-link-fill"></i></a>
+            <a href='https://github.com/SupunNethsara/Traveling-Guide-WEB'><i class=" ri-external-link-fill"></i></a>
           </div>
         </div>
         <div className='card-all'>
@@ -27,7 +27,7 @@ function Webdesign() {
           <div className="card-content">
             <h3>E-learning UI</h3>
             <p>Would you like to know more About this ? .You Can get more information about this by clicking here .Get in touch</p>
-            <a href='#'> <i class="ri-external-link-fill"></i></a>
+            <a href='https://github.com/SupunNethsara/E-learning-Platform-Front-end-'> <i class="ri-external-link-fill"></i></a>
           </div>
         </div>
         <div className='card-all'>
@@ -35,7 +35,7 @@ function Webdesign() {
           <div className="card-content">
             <h3>Skywings Service</h3>
             <p>Would you like to know more About this ? .You Can get more information about this by clicking here .Get in touch</p>
-            <a href='#'><i class="ri-external-link-fill"></i></a>
+            <a href='https://github.com/SupunNethsara/Flight-booking-ui'><i class="ri-external-link-fill"></i></a>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ function Webdesign() {
           <div className="card-content">
             <h3>Hosting Service Front-end</h3>
             <p>This project is a Hosting Service front-end website designed using Bootstrap. It includes a responsive layout, modern UI components, and features such as service plans, pricing tables, and contact forms to enhance user engagement.</p>
-            <a href='#'><i class="ri-external-link-fill"></i></a>
+            <a href='https://github.com/SupunNethsara/E-learning-Corces-Front-end-Bootstrap-'><i class="ri-external-link-fill"></i></a>
           </div>
         </div>
 
