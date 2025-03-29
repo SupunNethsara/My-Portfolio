@@ -20,11 +20,5 @@ Welcome to my professional portfolio! This website showcases my projects, skills
 - **Deployment**:  Netlify  
 - **CI/CD**: GitHub Actions  
 
-## 📸 Screenshots  
-
-| View | Preview |  
-|------|---------|  
-| **Desktop** | ![Desktop View](./Myportfolio.png) |  
-| **Mobile** | *Coming soon* |  
 
 
