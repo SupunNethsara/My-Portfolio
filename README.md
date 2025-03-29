@@ -1,4 +1,4 @@
-# 💼 [Your Name] - Portfolio
+# 💼 [Supun Nethsara] - Portfolio
 
 ## 🌟 Overview  
 Welcome to my professional portfolio! This website showcases my projects, skills, and experience as a [Your Profession, e.g., Full-Stack Developer, UI/UX Designer]. Built with modern technologies, it reflects my technical abilities and design aesthetic.
