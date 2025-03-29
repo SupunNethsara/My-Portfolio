@@ -21,7 +21,10 @@ Welcome to my professional portfolio! This website showcases my projects, skills
 - **CI/CD**: GitHub Actions  
 
 ## 📸 Screenshots  
-| Light Mode | Dark Mode | Mobile View |  
-|------------|-----------|-------------|  
-| ![Light](Myportfolio.png) 
+
+| View | Preview |  
+|------|---------|  
+| **Desktop** | ![Desktop View](./Myportfolio.png) |  
+| **Mobile** | *Coming soon* |  
+
 
