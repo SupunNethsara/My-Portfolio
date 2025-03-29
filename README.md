@@ -23,5 +23,5 @@ Welcome to my professional portfolio! This website showcases my projects, skills
 ## 📸 Screenshots  
 | Light Mode | Dark Mode | Mobile View |  
 |------------|-----------|-------------|  
-| ![Light](screenshots/light.png) | ![Dark](screenshots/dark.png) | ![Mobile](screenshots/mobile.png) |  
+| ![Light](Myportfolio.png) 
 
