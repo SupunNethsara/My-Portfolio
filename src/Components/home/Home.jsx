@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faWhatsapp, faInstagram, faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 import { Typewriter } from 'react-simple-typewriter';
-// import softwareitem1 from '/assets/pngwing1.png';
 import softwareitem1 from '/pngwing1.png';
 import softwareitem2 from '/pngwing2.png';
 import softwareitem3 from '/pngwing3.png';
@@ -20,37 +19,34 @@ import ScrollReveal from 'scrollreveal';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import './Home.css';
+import ParticlesBackground from './ParticlesBackground';
 
 export const Home = () => {
 
-  //Cv Download
   const [isDownloded, setIsDownloaded] = useState(false);
   const handleDownload = () => {
     setIsDownloaded(true);
     const link = document.createElement('a');
-    link.href = '/path/to/your/CV.pdf'; // Update with your actual CV file path
-    link.download = 'Supun_Nethsara_CV.pdf'; // The downloaded file name
+    link.href = '/path/to/your/CV.pdf';
+    link.download = 'Supun_Nethsara_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
   }
-  // Handle closing the backdrop
+
   const handleClose = () => {
     setOpen(false);
   };
-  //Naviagte more button
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const handleNavigate = () => {
-    setOpen(true); // Open the backdrop
+    setOpen(true);
     setTimeout(() => {
-      setOpen(false); // Close the backdrop
-      navigate('/about'); // Navigate to the /about page
-    }, 2000); // Delay for 2 seconds (you can adjust this)
+      setOpen(false);
+      navigate('/about');
+    }, 2000);
   };
-
-  //animation
 
   useEffect(() => {
     ScrollReveal().reveal('.text-section', {
@@ -74,18 +70,7 @@ export const Home = () => {
         <img src="/top-left-img.png" alt="" />
       </div>
       <Backdrop sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })} open={open} onClick={handleClose}><CircularProgress color="inherit" /></Backdrop>
-      {/* <div className="social-media">
-        <div className="logo">
-          <h3>Supun<span>Nethsara</span></h3>
-        </div>
-        <ul className='list'>
-          <li><FontAwesomeIcon icon={faFacebook} /></li>
-          <li><FontAwesomeIcon icon={faGithub} /></li>
-          <li><FontAwesomeIcon icon={faWhatsapp} /></li>
-          <li><FontAwesomeIcon icon={faInstagram} /></li>
-        </ul>
-      </div> */}
-
+      <ParticlesBackground />
       <div className="main-sec" >
 
         <div className="text">
@@ -161,7 +146,7 @@ export const Home = () => {
           <div className="img-box">
             <div className="img-item">
               <img src="/bg-remover.png" alt="" srcset="" />
-          </div>
+            </div>
           </div>
           <div className="explosion-background">
             <img src="/bg-explosion.png" alt="" />

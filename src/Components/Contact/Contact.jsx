@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import ScrollReveal from 'scrollreveal';
+import ParticlesBackground from '../home/ParticlesBackground';
 
 export const Contact = () => {
   const [showToast, setShowToast] = useState(false);
@@ -46,6 +47,7 @@ export const Contact = () => {
 
   return (
     <div className="h-full bg-transparent">
+      <ParticlesBackground/>
       <div className="container mx-auto py-10 text-center xl:text-left flex items-center justify-center h-full mt-10 px-4 md:px-8">
         <div className="flex flex-col w-full max-w-[700px] bg-opacity-80 backdrop-blur-lg p-6 md:p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6 md:mb-12">

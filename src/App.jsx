@@ -3,7 +3,7 @@ import './App.css';
 import { FaHome, FaUser, FaProjectDiagram, FaChartBar,FaComment , FaEnvelope } from 'react-icons/fa';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Home } from './Components/homee/Home';
+import { Home } from './Components/home/Home';
 import { About } from './Components/About/About';
 import { Services } from './Components/Servicess/Services';
 import { Portfolio } from './Components/Portfolio/Portfolio';

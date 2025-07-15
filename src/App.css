@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
+   font-family: "Inter", sans-serif;
 }
 
 .main {
@@ -11,8 +11,7 @@
   height: 100%;
   justify-content: flex-start;
   align-items: center;
-  /* background-color: #141414; */
-  background-color: rgb(13, 1, 24);
+background-color: rgb(13, 1, 24);
 }
 
 .drawer {
@@ -24,9 +23,6 @@
 
 
 }
-/*Social-Media*/
-
-
 .social-media {
   display: flex;
   justify-content: space-between;
@@ -38,7 +34,6 @@
   margin-left:80px ;
 }
 .social-media .logo h3{
-  font-family: 'Roboto', sans-serif; 
   color: red;
   font-weight: 600;
   text-transform: uppercase;
@@ -64,8 +59,6 @@ li {
   display: inline-block;
 }
 
-
-/* Sidebar styling */
 .main .sidebar {
   max-height: 400px;
   width: 3%;
@@ -117,8 +110,7 @@ li {
   pointer-events: none;
   transition: opacity 0.3s, transform 0.3s;
   transform: translateX(50px);
-  /* Start the tooltip from the right */
-  white-space: nowrap;
+ white-space: nowrap;
   font-size: 18px;
 
   text-transform: uppercase;
@@ -135,7 +127,6 @@ li {
   display: none;
 }
 
-/* Extra small devices (phones, less than 576px) */
 @media (max-width: 576px) {
   .drawer {
     width: 100%;
@@ -158,8 +149,7 @@ li {
     background: hsla(0, 0%, 98%, 0.1);
     display: flex;
     justify-content: space-around;
-    /* Ensures spacing is even */
-    align-items: center;
+   align-items: center;
     z-index: 10;
   }
 
@@ -181,8 +171,6 @@ li {
   }
 
 }
-
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 768px) {
  .main .sidebar {
     width: 3%;
@@ -192,7 +180,6 @@ li {
 
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) {
  .main .sidebar {
     max-height: 350px;
@@ -202,7 +189,6 @@ li {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1200px) {
   .main .sidebar {
   
@@ -227,8 +213,6 @@ li {
   }
 }
 
-
-/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .main .sidebar {
   

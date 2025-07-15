@@ -1,8 +1,4 @@
-*{
-    font-family: "Poppins", serif;
-}
 
-/*main*/
 
 .main-sec {
 
@@ -216,10 +212,6 @@
     mix-blend-mode: lighten;
 }
 
-
-
-
-/* Extra small devices (phones, less than 576px) */
 @media (max-width: 576px) {
     .social-media {
         padding: 4px;
@@ -237,8 +229,6 @@
     .top-right-image {
         display: none;
     }
-
-    /*main*/
 
     .main-sec {
         display: grid;
@@ -709,9 +699,9 @@
 
     .text-section p {
         max-width: 100%;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.6;
-        color: #b8b3b3;
+        color: #ddd8d8;
         margin-top: 1rem;
         word-spacing: 0.2rem;
         text-align: left;

@@ -1,21 +1,21 @@
-// FirebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAwza_YW5pSVAEIKAS6Amntt_73voFbF-Y",
-    authDomain: "my-portfolio-b2a15.firebaseapp.com",
-    projectId: "my-portfolio-b2a15",
-    storageBucket: "my-portfolio-b2a15.appspot.com",
-    messagingSenderId: "821653278762",
-    appId: "1:821653278762:web:e3b8d8fcd74cefafc67353",
-    measurementId: "G-Z0R9QJ8Y84"
+  apiKey: "AIzaSyDoo9-luLCICHANpT9BM_ETuWzze2F9TGw",
+  authDomain: "my-portfolio-c00bd.firebaseapp.com",
+  databaseURL: "https://my-portfolio-c00bd-default-rtdb.firebaseio.com",
+  projectId: "my-portfolio-c00bd",
+  storageBucket: "my-portfolio-c00bd.appspot.com",
+  messagingSenderId: "41561799590",
+  appId: "1:41561799590:web:c792c65a75d4114b2a6d67",
+  measurementId: "G-3FJ8H3ZZ22"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 const storage = getStorage(app);
+const analytics = getAnalytics(app);
 
-export { db, storage };
+export { app, storage, analytics };

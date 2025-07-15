@@ -12,17 +12,17 @@
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center the items */
+    justify-content: center; 
     width: 100%;
   }
   
   .nav li {
-    margin: 0 20px; /* Space between the items */
+    margin: 0 20px;
     cursor: pointer;
   }
   
   .nav li:hover {
-    color: #ff0000; /* Add hover effect */
+    color: #ff0000;
   }
  .down-right-bulb{
     position:fixed;
