@@ -46,20 +46,6 @@
         0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-.pera {
-    width: 100%;
-    height: auto;
-}
-
-.text-section p {
-    width: 80%;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #b8b3b3;
-    margin-top: 1rem;
-    word-spacing: 0.2rem;
-    text-align: left;
-}
 
 .text .typewrite {
 
@@ -105,22 +91,6 @@
     display: block;
 }
 
-/*Software*/
-.software {
-    display: flex;
-    align-items: center;
-    gap: 33px;
-    margin-top: 30px;
-}
-
-.software .software_item {
-    height: 35px;
-    width: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(7, 44, 255, 0.1);
-}
 
 .cv {
 
@@ -279,18 +249,6 @@
 
     }
 
-    .text-section p {
-        line-height: 1.4;
-        width: 100%;
-    
-        font-size: 13px;
-        text-align: center;
-   
-        padding: 5px;
-    
-        word-break: break-word;
-    
-    }
 
     .text .typewrite {
         font-size: 30px;
@@ -331,22 +289,7 @@
 
     .top-right-image {}
 
-    /*Software*/
-    .software {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        margin-top: 20px;
-
-    }
-
-    .software .software_item {
-        height: 30px;
-        width: 30px;
-        display: flex;
-    }
-
+   
     .cv {
         display: grid;
         margin: 30px 10px 60px 10px;
@@ -529,13 +472,7 @@
         font-size: 24px;
     }
 
-    .text-section p {
-        line-height: 1.6;
-        margin-top: 1.5rem;
-        word-spacing: 0.2rem;
-        text-align: center;
-        margin-left: 9%;
-    }
+    
 
     .text .typewrite {
         font-size: 2.2rem;
@@ -612,13 +549,7 @@
         font-size: 22px;
     }
 
-    .text-section p {
-        max-width: 90%;
-        font-size: 13px;
-        line-height: 1.6;
-        margin-top: 10px;
-
-    }
+  
 
     .text .typewrite {
         font-size: 2rem;
@@ -695,17 +626,6 @@
 
     }
 
-
-
-    .text-section p {
-        max-width: 100%;
-        font-size: 16px;
-        line-height: 1.6;
-        color: #ddd8d8;
-        margin-top: 1rem;
-        word-spacing: 0.2rem;
-        text-align: left;
-    }
 
     .text .typewrite {
         font-size: 1.9rem;

@@ -44,7 +44,7 @@ function Testimonial() {
   }
 
   return (
-    <section className="py-3 px-4 sm:px-6 lg:px-4 ">
+    <section className="py-3 px-4 sm:px-2 mb-14  lg:px-4 ">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 relative pb-2">
           Testimonials
