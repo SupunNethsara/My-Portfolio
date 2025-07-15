@@ -1,13 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import axios from 'axios';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-function Testimonal() {
+function Testimonial() {
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,23 +12,14 @@ function Testimonal() {
         const response = await axios.get(
           'https://my-portfolio-c00bd-default-rtdb.firebaseio.com/feedbacks.json'
         );
-        const feedbackList = response.data ? Object.entries(response.data).map(([key, value]) => ({
+        const testimonialsData = Object.entries(response.data).map(([key, value]) => ({
           id: key,
-          ...value,
-          date: new Date(value.timestamp).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-          })
-        })) : [];
-    
-        feedbackList.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-        
-        setTestimonials(feedbackList);
+          ...value
+        }));
+        setTestimonials(testimonialsData);
+        setLoading(false);
       } catch (err) {
-        console.error('Error fetching testimonials:', err);
-        setError('Failed to load testimonials');
-      } finally {
+        setError(err.message);
         setLoading(false);
       }
     };
@@ -45,110 +30,68 @@ function Testimonal() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-red-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="text-center py-10 text-red-400">
-        {error}
-      </div>
-    );
-  }
-
-  if (testimonials.length === 0) {
-    return (
-      <div className="text-center py-10">
-        <div className="max-w-md mx-auto p-8 bg-gray-800/50 rounded-xl border border-dashed border-gray-600">
-          <svg className="w-12 h-12 mx-auto text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-          </svg>
-          <h3 className="text-lg font-medium text-gray-300 mb-2">No feedback yet</h3>
-          <p className="text-gray-400 mb-6">Your feedback could appear here!</p>
-        </div>
+      <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
+        <p>Error loading testimonials: {error}</p>
       </div>
     );
   }
 
   return (
-    <section className="py-5 px-4 sm:px-4 lg:px-4 ">
+    <section className="py-3 px-4 sm:px-6 lg:px-4 ">
       <div className="max-w-7xl mx-auto">
-       
-        
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={40}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            }
-          }}
-          navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }}
-          pagination={{ 
-            clickable: true,
-            el: '.swiper-pagination',
-            type: 'bullets',
-          }}
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          className="relative"
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 relative pb-2">
+          Testimonials
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full"></span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
-              <div className="h-full p-6 bg-gray-800/40 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-700/50 hover:border-red-500/30 transition-all duration-300">
-                <div className="flex flex-col h-full">
-                  <div className="flex-grow">
-                    <div className="text-red-400 text-4xl mb-2 float-left">"</div>
-                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                      {testimonial.comment}
-                    </p>
-                      <div className="text-red-400 text-4xl mb-2 float-right">"</div>
-                  </div>
-                  <div className="flex items-center mt-6">
-                    <div className="flex-shrink-0 mr-4">
-                      <img
-                        src={testimonial.profilePic || `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=random&color=fff&size=128`}
-                        alt={testimonial.name}
-                        className="w-14 h-14 rounded-full object-cover border-2 border-red-500/80"
-                        onError={(e) => {
-                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=random&color=fff&size=128`;
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <div className="font-medium text-white">{testimonial.name}</div>
-                      {testimonial.date && (
-                        <div className="text-sm text-gray-400">{testimonial.date}</div>
-                      )}
-                    </div>
-                  </div>
+            <div 
+              key={testimonial.id}
+              className="bg-gray-600/20 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div className="ml-4">
+                  <h3 className="font-semibold text-lg text-gray-100">{testimonial.name}</h3>
+                  <p className="text-gray-300 text-sm">
+                    {new Date(testimonial.timestamp).toLocaleDateString()}
+                  </p>
                 </div>
               </div>
-            </SwiperSlide>
+              <p className="text-gray-400 italic">
+                "{testimonial.comment}"
+              </p>
+              <div className="mt-4 flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                ))}
+              </div>
+            </div>
           ))}
-          
-          <div className="swiper-button-next !text-red-500 !right-0"></div>
-          <div className="swiper-button-prev !text-red-500 !left-0"></div>
-          
-          <div className="swiper-pagination !relative !mt-10"></div>
-        </Swiper>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Testimonal;
+export default Testimonial;
