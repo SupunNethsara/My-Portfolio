@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Import React here
 import './App.css';
-import { FaHome, FaUser, FaProjectDiagram, FaChartBar,FaComment , FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaChartBar, FaComment, FaEnvelope } from 'react-icons/fa';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Home } from './Components/home/Home';
@@ -55,7 +55,7 @@ function App() {
                     })}
                   </div>
                   {/* Tooltip */}
-                  <span style={{fontSize:'13px'}} className={`tooltip ${open ? "hidden" : ""}`}>
+                  <span style={{ fontSize: '13px' }} className={`tooltip ${open ? "hidden" : ""}`}>
                     {menu.name}
                   </span>
                 </Link>
@@ -66,8 +66,12 @@ function App() {
 
         <div className="drawer">
           <div className="social-media">
-            <div className="logo">
-              <h3>Supun <span>Nethsara</span></h3>
+            <div className="logo flex items-center">
+              <img
+                src="MyLogo.png"
+                alt="Your Logo"
+                className="h-20  md:w-28 md:h-28 transition-all hover:scale-105"
+              />
             </div>
             <ul className='list'>
               <li><FontAwesomeIcon icon={faFacebook} /></li>
@@ -77,23 +81,23 @@ function App() {
             </ul>
           </div>
           <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />}>
-    <Route index element={<Skills />} />
-    <Route path="education" element={<Eduacion />} />
-    <Route path="experience" element={<Experience />} />
-    <Route path="technology" element={<Technology />} />
-  </Route>
-  <Route path="/services" element={<Services />} />
-  <Route path="/portfolio" element={<Portfolio />}>
-    <Route index element={<All />} />
-    <Route path="webapp" element={<Webapp />} />
-    <Route path="website" element={<Webdesign />} />
-    <Route path="userdesign" element={<Userdesign />} />
-  </Route>
-  <Route path="/feedbacks" element={<Feedbacks />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />}>
+              <Route index element={<Skills />} />
+              <Route path="education" element={<Eduacion />} />
+              <Route path="experience" element={<Experience />} />
+              <Route path="technology" element={<Technology />} />
+            </Route>
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />}>
+              <Route index element={<All />} />
+              <Route path="webapp" element={<Webapp />} />
+              <Route path="website" element={<Webdesign />} />
+              <Route path="userdesign" element={<Userdesign />} />
+            </Route>
+            <Route path="/feedbacks" element={<Feedbacks />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
 
 
         </div>

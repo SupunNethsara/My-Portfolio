@@ -24,7 +24,7 @@
 .text-section {
     width: 100%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 15%;
 }
 
@@ -120,9 +120,8 @@
     position: relative;
     width: 31vw;
     height: 31vw;
-    /* margin: 150px; */
-    margin-left: 25%;
-    margin-top: 17%;
+   margin-left: 25%;
+    margin-top: 8%;
     border-radius: 50%;
     padding: 4px;
     overflow: hidden;
@@ -537,7 +536,7 @@
 
 
     .text-section {
-        margin-top: 12%;
+        margin-top: 6%;
         margin-left: 10%;
     }
 
@@ -594,62 +593,5 @@
 
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    
-    .social-media {
-        padding: 3px;
-    }
-
-    .list {
-        margin-right: 20px;
-    }
-
-    li {
-        margin: 10px 5px 10px 25px;
-        font-size: 22px;
-    }
 
 
-
-
-
-    .text-section {
-        width: 100%;
-        height: auto;
-        margin-top: 16%;
-        margin-left: 10%;
-    }
-
-    .text-section h5 {
-        font-size: 24px;
-
-    }
-
-
-    .text .typewrite {
-        font-size: 1.9rem;
-        margin-Top: 3px;
-    }
-
-
-
-    /*Software*/
-    .software {
-        gap: 30px;
-        margin-top: 25px;
-    }
-
-
-
-    /*img-box*/
-    .img-box {
-        width: 32vw;
-        height: 32vw;
-        margin-left: 20%;
-        margin-top: 12%;
-        border-radius: 50%;
-        padding: 5px;
-}
-
-}
